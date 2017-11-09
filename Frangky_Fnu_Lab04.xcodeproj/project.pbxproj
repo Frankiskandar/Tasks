@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		017251671FACFE830053CA60 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017251661FACFE830053CA60 /* main.swift */; };
+		0172516E1FACFF270053CA60 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0172516D1FACFF270053CA60 /* Task.swift */; };
+		017251701FACFF660053CA60 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0172516F1FACFF660053CA60 /* TaskList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		017251631FACFE830053CA60 /* Frangky_Fnu_Lab04 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Frangky_Fnu_Lab04; sourceTree = BUILT_PRODUCTS_DIR; };
 		017251661FACFE830053CA60 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0172516D1FACFF270053CA60 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		0172516F1FACFF660053CA60 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				017251661FACFE830053CA60 /* main.swift */,
+				0172516D1FACFF270053CA60 /* Task.swift */,
+				0172516F1FACFF660053CA60 /* TaskList.swift */,
 			);
 			path = Frangky_Fnu_Lab04;
 			sourceTree = "<group>";
@@ -120,6 +126,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				017251701FACFF660053CA60 /* TaskList.swift in Sources */,
+				0172516E1FACFF270053CA60 /* Task.swift in Sources */,
 				017251671FACFE830053CA60 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
