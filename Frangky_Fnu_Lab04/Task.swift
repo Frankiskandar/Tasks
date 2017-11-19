@@ -34,15 +34,20 @@ class Task: NSObject {
         self.completed = c
     }
     
-//    convenience init() {
-//
-//    }
-//
+    convenience init(priorityp : Priority) {
+        self.init()
+        
+    }
+
 //    convenience init(text t: String, dueDate d: Date, priority p: Priority, completed c: Bool) {
+//        self.text = t as NSString
+//        self.dueDate = d
+//        self.priority = p
+//        self.completed = c
 //    }
     
     public func toString()-> String {
-        let info = "Text: \(self.text)\ndueDate: \(self.dueDate)\nPriority: $\(self.priority)\ncompleted: \(self.completed)\n"
+        let info = "Text: \(self.text)\ndueDate: \(self.dueDate)\nPriority: \(self.priority)\ncompleted: \(self.completed)\n"
         
         return info
         

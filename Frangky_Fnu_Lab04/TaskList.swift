@@ -22,80 +22,79 @@ class TaskList: NSObject {
     }
     
     
-    //Returns an NSArray containing all Tasks which are marked completed.
+    //Returns an Array containing all Tasks which are marked completed.
     func completeTasks() -> [Any] {
-        let array = NSMutableArray()
+        var array = [Task]()
         
         for t in tasks {
             if t.completed == true {
-                array.add(t)
+                array.append(t)
             }
         }
-        return (array as! [Any] as NSArray) as! [Any]
+        return array
     }
     
-    //Returns an NSArray containing all Tasks which are not completed.
+    //Returns an Array containing all Tasks which are not completed.
     func incompleteTasks() -> [Any] {
-        let array = NSMutableArray()
+        var array = [Task]()
         
         for t in tasks {
             if t.completed == false {
-                array.add(t)
+                array.append(t)
             }
         }
-        return (array as! [Any] as NSArray) as! [Any]
+        return array
     
     }
     
-    //Returns an NSArrary containing all Tasks in the list.
+    //Returns an Arrary containing all Tasks in the list.
     func allTasks() -> [Any] {
-        var array = NSMutableArray()
+        var array = [Task]()
         
         for t in tasks {
             //print("Item \(index): \(value)")
-            array.add(t) // adding the maching object to ns array
+            array.append(t) // adding the matching object to array
         }
-        return (array as! [Any] as NSArray) as! [Any]
+        return array
     }
     
-    //Returns an NSArray consisting of classes which are past due. Past due tasks are defined as tasks which have a due date prior to the current day. For example, a Task with a dueDate of 5:16:00pm on 9/11/2015 is not past due until the date rolls over to 9/12/2015.
+    //Returns an Array consisting of classes which are past due. Past due tasks are defined as tasks which have a due date prior to the current day. For example, a Task with a dueDate of 5:16:00pm on 9/11/2015 is not past due until the date rolls over to 9/12/2015.
     
     func pastDueTasks() -> [Any] {
-        let array = NSMutableArray()
+        var array = [Task]()
         let currentDate = Date()
         
         for t in tasks {
             if t.dueDate! < currentDate {
-                array.add(t)
+                array.append(t)
             }
         }
-        
-        
-        return (array as! [Any] as NSArray) as! [Any]
+  
+        return array
     }
     
-    //Returns an NSArray consisting of classes which are between the specified start and stop dates/times
+    //Returns an Array consisting of classes which are between the specified start and stop dates/times
     func tasksBetween(_ start: Date, and stop: Date) -> [Any] {
-        let array = NSMutableArray()
+        var array = [Task]()
         
         for t in tasks {
             if t.dueDate! >= start && t.dueDate! <= stop {
-                array.add(t)
+                array.append(t)
             }
         }
         
-        return (array as! [Any] as NSArray) as! [Any]
+        return array
     }
     
-    //Returns an NSArray containing all Tasks with a priority matching the specified Priority.
+    //Returns an Array containing all Tasks with a priority matching the specified Priority.
     func tasks(priority p: Task.Priority) -> [Any] {
-        let array = NSMutableArray()
+        var array = [Task]()
         for t in tasks {
             if t.priority == p {
-                array.add(t)
+                array.append(t)
             }
         }
-        return (array as! [Any] as NSArray) as! [Any]
+        return array
     }
     
     // This method should add the specified Task to the list. If a Task already exists in the list where all properties match the
@@ -123,7 +122,7 @@ class TaskList: NSObject {
     }
     
     //This method should remove the specified Task from the list. If a Task exists in the list where all properties match the
-//    specified task, then the method should return YES and remove the item from the list. If no matching Task is found, then nothing should be removed and the method should return NO.
+    //pecified task, then the method should return YES and remove the item from the list. If no matching Task is found, then nothing should be removed and the method should return NO.
     func remove(_ task: Task) -> Bool {
         for (index, value) in tasks.enumerated() {
             if value == task {
@@ -148,7 +147,7 @@ class TaskList: NSObject {
         }
     }
         
-    
+    //print all the tasks
     func listTasks() {
         for task in tasks {
             print(task.toString())
